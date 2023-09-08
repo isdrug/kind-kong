@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: "15.8.5"
+    targetRevision: "15.10.1"
     chart: prometheus
     helm:
       values: |
