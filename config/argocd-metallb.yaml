@@ -15,7 +15,7 @@ spec:
     pod-security.kubernetes.io/warn: privileged
   source:
     repoURL: https://metallb.github.io/metallb
-    targetRevision: "0.13.2"
+    targetRevision: "0.13.3"
     chart: metallb
     helm:
       values: |
