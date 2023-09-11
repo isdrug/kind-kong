@@ -7,11 +7,18 @@ spec:
   project: default
   source:
     repoURL: https://metallb.github.io/metallb
-    targetRevision: "0.12.1"
+    targetRevision: "0.13.11"
     chart: metallb
     helm:
       values: |
         configInline:
+          labels:
+            pod-security.kubernetes.io/enforce: privileged
+            pod-security.kubernetes.io/audit: privileged
+            pod-security.kubernetes.io/warn: privileged
+          speaker:
+            frr:
+            enabled: true          
           address-pools:
             - name: default
               protocol: layer2
@@ -20,13 +27,6 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system
-      labels:
-        pod-security.kubernetes.io/enforce: privileged
-        pod-security.kubernetes.io/audit: privileged
-        pod-security.kubernetes.io/warn: privileged
-      speaker:
-        frr:
-          enabled: true          
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
