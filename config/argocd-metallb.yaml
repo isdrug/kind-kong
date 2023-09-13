@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://metallb.github.io/metallb
-    targetRevision: main
+    targetRevision: "0.12.1"
     chart: metallb
     helm:
       values: |
