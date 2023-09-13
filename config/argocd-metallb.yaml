@@ -19,7 +19,7 @@ spec:
                 - 172.18.0.2-172.18.0.5
   destination:
     server: https://kubernetes.default.svc
-    namespace: metallb-system2
+    namespace: metallb-system
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
