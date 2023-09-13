@@ -22,8 +22,6 @@ spec:
           create: true
         psp:
           create: true
-        prometheus:
-          scrapeAnnotations: false
         serviceAccounts:
           controller:
             create: true
