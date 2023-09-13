@@ -2,11 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: metallb
-  namespace: argocd
-  labels:
-    pod-security.kubernetes.io/enforce: privileged
-    pod-security.kubernetes.io/audit: privileged
-    pod-security.kubernetes.io/warn: privileged
+  namespace: argocd  
 spec:
   project: default
   source:
@@ -24,6 +20,10 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system
+    labels:
+      pod-security.kubernetes.io/enforce: privileged
+      pod-security.kubernetes.io/audit: privileged
+      pod-security.kubernetes.io/warn: privileged
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
