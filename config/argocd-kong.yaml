@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://charts.konghq.com
-    targetRevision: main
+    targetRevision: "2.27.0"
     chart: kong
     helm:
       parameters:
