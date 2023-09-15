@@ -12,12 +12,11 @@ spec:
     helm:
       values: |
         config:
-          address-pools:
+          ipaddress-pools:
             - name: default
               protocol: layer2
               addresses:
                 - 172.18.0.2-172.18.0.27
-                - 172.17.0.2-172.17.0.27
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system
