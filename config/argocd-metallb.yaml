@@ -12,7 +12,7 @@ spec:
     helm:
       values: |
         config:
-          ipaddress-pools:
+          ipaddresspools:
             - name: default
               protocol: layer2
               addresses:
