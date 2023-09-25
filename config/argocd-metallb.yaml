@@ -10,14 +10,14 @@ spec:
     targetRevision: "0.13.11"
     chart: metallb
     helm:
-      values: 
-        data:|
+      values:
+        data:
           config: |
             address-pools:
             - name: default
               protocol: layer2
               addresses:
-                - 172.18.0.2-172.18.0.5
+              - 172.18.0.2-172.18.0.5
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system
